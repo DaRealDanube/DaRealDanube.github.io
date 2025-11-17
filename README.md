@@ -4,7 +4,7 @@ __here you will find the Literally Impossible Levels List (aka LILL), my project
 
 
 
-((https://raw.githubusercontent.com/DaRealDanube/DaRealDanube.github.io/refs/heads/main/%20HackerDanube.png))
+
 
 
 
