@@ -4,152 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danube Mappings</title>
+    <link rel="stylesheet" href="core.css">
     <script src="gtag.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
     <script>eruda.init();</script>
-
-<style>
-body {
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(135deg, #7ad0ff, #b8ffea, #d6ffe4);
-  font-family: Arial, Helvetica, sans-serif;
-  color: #003b60;
-  overflow-x: hidden;
-}
-
-header {
-  text-align: center;
-  padding: 30px;
-  background: rgba(255,255,255,0.55);
-  backdrop-filter: blur(25px);
-  border-bottom: 1px solid rgba(255,255,255,0.65);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-}
-
-header h1 {
-  margin: 0;
-  color: #008cff;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-
-nav {
-  text-align: center;
-  padding: 15px;
-  background: rgba(255,255,255,0.35);
-  backdrop-filter: blur(18px);
-  border-bottom: 1px solid rgba(255,255,255,0.6);
-}
-
-nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-  color: #0074d9;
-  padding: 10px 20px;
-  border-radius: 40px;
-  background: linear-gradient(145deg, #ffffff, #c9f1ff);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-  transition: 0.2s ease-in-out;
-}
-
-nav a:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 7px 20px rgba(0,0,0,0.25);
-}
-
-main {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 25px;
-  background: rgba(255,255,255,0.55);
-  backdrop-filter: blur(20px);
-  border-radius: 25px;
-  box-shadow: 0 0 25px rgba(0,0,0,0.18);
-  border: 1px solid rgba(255,255,255,0.75);
-}
-
-main h2, main h1 {
-  color: #008cff;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-footer {
-  margin-top: 50px;
-  padding: 20px;
-  text-align: center;
-  background: rgba(255,255,255,0.5);
-  backdrop-filter: blur(15px);
-  border-top: 1px solid rgba(255,255,255,0.7);
-  box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
-}
-</style>
-
 </head>
 <body>
 
-<header>
+<div class="bubbles">
+    <div class="bubble" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="bubble" style="left: 25%; animation-delay: 3s;"></div>
+    <div class="bubble" style="left: 40%; animation-delay: 6s;"></div>
+    <div class="bubble" style="left: 55%; animation-delay: 1s;"></div>
+    <div class="bubble" style="left: 70%; animation-delay: 4s;"></div>
+    <div class="bubble" style="left: 85%; animation-delay: 2s;"></div>
+</div>
+
+<header class="glass">
     <h1>Welcome to Danube Mappings GitHub Page!!! :D</h1>
 </header>
 
-<nav>
+<nav class="glass">
     <a href="index.html">Home</a>
     <a href="LiterallyImpossibleLevelsList.html">Literally Impossible Levels List</a>
     <a href="https://www.youtube.com/@DanubeMappings?SubConfirmation=1?DanubeTag=Danube123790&origin=Danube">YouTube</a>
 </nav>
 
-<main>
+<main class="glass">
     <h2>Hello :D</h2>
     <p>hello everyone this is my website.</p>
+
+    <div id="greeting"></div>
+
+    <div id="nameForm">
+        <input type="text" id="username" placeholder="Enter your name">
+        <button class="button" onclick="saveName()">Save Name</button>
+    </div>
 </main>
-
-<div id="greeting"></div>
-
-<div id="nameForm">
-  <input type="text" id="username" placeholder="Enter your name">
-  <button onclick="saveName()">Save Name</button>
-</div>
 
 <script>
 function getCookie(name) {
-  const value = `; ${document.cookie}`;
-  const parts = value.split(`; ${name}=`);
-  if (parts.length === 2) return parts.pop().split(';').shift();
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
 }
-
 function setCookie(name, value, days) {
-  const expires = new Date(Date.now() + days*24*60*60*1000).toUTCString();
-  document.cookie = `${name}=${value}; path=/; expires=${expires}`;
+    const expires = new Date(Date.now() + days*24*60*60*1000).toUTCString();
+    document.cookie = `${name}=${value}; path=/; expires=${expires}`;
 }
-
 function saveName() {
-  const name = document.getElementById('username').value;
-  if(name) {
-    setCookie('username', name, 7);
-    showGreeting(name);
-  }
+    const name = document.getElementById('username').value;
+    if(name) {
+        setCookie('username', name, 7);
+        showGreeting(name);
+    }
 }
-
 function showGreeting(name) {
-  document.getElementById('greeting').innerText = `Hello, ${name}! 👋`;
-  document.getElementById('nameForm').style.display = 'none';
+    document.getElementById('greeting').innerText = `Hello, ${name}! 👋`;
+    document.getElementById('nameForm').style.display = 'none';
 }
-
 const savedName = getCookie('username');
-if(savedName) {
-  showGreeting(savedName);
-}
+if(savedName) showGreeting(savedName);
 </script>
 
 <p id="ga-status">Checking GA...</p>
+
 <script>
-  setTimeout(() => {
+setTimeout(() => {
     document.getElementById("ga-status").innerText =
-      typeof gtag === "function" ? "Google Analytics tag loaded!" : "Google Analytics Tag not found.";
-  }, 2000);
+        typeof gtag === "function" ? "Google Analytics tag loaded!" : "Google Analytics Tag not found.";
+}, 2000);
 </script>
 
-<footer>
+<footer class="glass">
     <p>© 2025 Danube Mappings, All Rights Reserved.</p>
 </footer>
 
