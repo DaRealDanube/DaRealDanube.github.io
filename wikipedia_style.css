@@ -1,0 +1,108 @@
+/* Wikipedia-style base layout */
+
+body {
+  font-family: sans-serif;
+  background: #f8f9fa;
+  color: #202122;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Page container */
+#content {
+  max-width: 960px;
+  margin: 2rem auto;
+  background: #ffffff;
+  padding: 1.5rem 2rem;
+  border: 1px solid #a2a9b1;
+}
+
+/* Headings */
+h1 {
+  font-family: "Linux Libertine", "Times New Roman", serif;
+  font-size: 2.2em;
+  font-weight: normal;
+  border-bottom: 1px solid #a2a9b1;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-family: "Linux Libertine", "Times New Roman", serif;
+  font-size: 1.6em;
+  font-weight: normal;
+  border-bottom: 1px solid #a2a9b1;
+  margin-top: 1.5em;
+}
+
+h3 {
+  font-size: 1.2em;
+  margin-top: 1.2em;
+}
+
+/* Paragraphs */
+p {
+  margin: 0.5em 0;
+}
+
+/* Links */
+a {
+  color: #0645ad;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #0b0080;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Infobox */
+.infobox {
+  float: right;
+  width: 250px;
+  background: #f8f9fa;
+  border: 1px solid #a2a9b1;
+  padding: 0.4em;
+  margin: 0 0 1em 1em;
+  font-size: 0.9em;
+}
+
+.infobox th {
+  background: #eaecf0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.infobox td {
+  padding: 0.2em 0.4em;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #a2a9b1;
+  padding: 0.4em;
+}
+
+/* Sidebar-ish box */
+.sidebar {
+  background: #f8f9fa;
+  border: 1px solid #a2a9b1;
+  padding: 1em;
+  font-size: 0.9em;
+}
+
+/* Footer */
+.footer {
+  margin-top: 2em;
+  font-size: 0.8em;
+  color: #54595d;
+  border-top: 1px solid #a2a9b1;
+  padding-top: 0.5em;
+}
