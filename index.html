@@ -1,91 +1,91 @@
-<!DOCTYPE html>
+<DOCTYPE! html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Danube Mappings</title>
-<link rel="icon" href="https://raw.githubusercontent.com/DaRealDanube/DaRealDanube.github.io/main/Danube.ico">
-<link rel="stylesheet" href="classic.css">
-<script src="gtag.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danube Mappings</title>
+    <script src="gtag.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
 </head>
+  <link rel="stylesheet" href="core.css">
+  <link rel="icon" href="Danube.iso">
+  <link rel="icon" href="https://raw.githubusercontent.com/DaRealDanube/DaRealDanube.github.io/refs/heads/main/Danube.ico">
 <body>
 
-<div id="container">
+    <div id="container">
 
-    <div id="topbar">
-        <img src="https://github.com/DaRealDanube/DaRealDanube.github.io/blob/main/Banner.png" alt="Banner">
-    </div>
 
-    <div id="content">
+    <div id="site-header">
+    <img src="https://github.com/DaRealDanube/DaRealDanube.github.io/blob/main/Banner.png" alt="Fuck You For Using Reader">
+    </div>      
+    <header>
+        <h1>Welcome to Danube Mappings GitHub Page!!! :D</h1>
+    </header>
 
-        <div id="side">
-            <div id="greeting"></div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="LiterallyImpossibleLevelsList.html">Literally Impossible Levels List</a>
+        <a href="DanubeWiki.html">The DanubeWiki</a>
+        <a href="https://www.youtube.com/@DanubeMappings?SubConfirmation=1?DanubeTag=Danube123790&origin=Danube">YouTube</a>
+    </nav>
 
-            <div id="nameForm">
-                <input type="text" id="username" placeholder="Enter your name">
-                <button onclick="saveName()">Save Name</button>
-            </div>
-        </div>
+    <main>
+        <h2>Hello :D</h2>
+        <p>hello everyone this is my website.</p>
+    </main>
+<div id="greeting"></div>
 
-        <div id="main">
-            <h1>Welcome to Danube Mappings GitHub Page!!! :D</h1>
-            <h2>Hello :D</h2>
-            <p>hello everyone this is my website.</p>
-
-            <div id="nav">
-                <a href="index.html">Home</a>
-                <a href="LiterallyImpossibleLevelsList.html">Literally Impossible Levels List</a>
-                <a href="DanubeWiki.html">The DanubeWiki</a>
-                <a href="https://www.youtube.com/@DanubeMappings?SubConfirmation=1?DanubeTag=Danube123790&origin=Danube">YouTube</a>
-            </div>
-        </div>
-
-    </div>
-
-    <div id="footer">
-        <p>© 2025 Danube Mappings, All Rights Reserved.</p>
-    </div>
-
+<div id="nameForm">
+  <input type="text" id="username" placeholder="Enter your name">
+  <button onclick="saveName()">Save Name</button>
 </div>
 
 <script>
-function getCookie(name) {
+  // Function to get a cookie by name
+  function getCookie(name) {
     const value = `; ${document.cookie}`;
     const parts = value.split(`; ${name}=`);
     if (parts.length === 2) return parts.pop().split(';').shift();
-}
+  }
 
-function setCookie(name, value, days) {
+  // Function to set a cookie
+  function setCookie(name, value, days) {
     const expires = new Date(Date.now() + days*24*60*60*1000).toUTCString();
     document.cookie = `${name}=${value}; path=/; expires=${expires}`;
-}
+  }
 
-function saveName() {
+  // Save name and update greeting
+  function saveName() {
     const name = document.getElementById('username').value;
     if(name) {
-        setCookie('username', name, 7);
-        showGreeting(name);
+      setCookie('username', name, 7); // expires in 7 days
+      showGreeting(name);
     }
-}
+  }
 
-function showGreeting(name) {
+  // Show greeting
+  function showGreeting(name) {
     document.getElementById('greeting').innerText = `Hello, ${name}! 👋`;
     document.getElementById('nameForm').style.display = 'none';
-}
+  }
 
-const savedName = getCookie('username');
-if(savedName) showGreeting(savedName);
-</script>
-
-<p id="ga-status">Checking GA...</p>
+  // Check if user already has a cookie
+  const savedName = getCookie('username');
+  if(savedName) {
+    showGreeting(savedName);
+  }
+</script
+      <p id="ga-status">Checking GA...</p>
 <script>
-setTimeout(() => {
+  setTimeout(() => {
     document.getElementById("ga-status").innerText =
-        typeof gtag === "function" ? "Google Analytics tag loaded!" : "Google Analytics Tag not found.";
-}, 2000);
+      typeof gtag === "function" ? "Google Analytics tag loaded!" : "Google Analytics Tag not found.";
+  }, 2000);
 </script>
+    <footer>
+        <p>© 2025 Danube Mappings, All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
